@@ -577,17 +577,40 @@ else if (input.includes("which medicine to take if i have a fracture?")) {
 else if (input.includes("how to cure a fracture?")) {
     output = "1)Stop any bleeding. Apply pressure to the wound with a sterile bandage, a clean cloth or a clean piece of clothing. 2)Immobilize the injured area. Don't try to realign the bone or push a bone that's sticking out back in. If you've been trained in how to splint and professional help isn't readily available, apply a splint to the area above and below the fracture sites. Padding the splints can help reduce discomfort. 3)Apply ice packs to limit swelling and help relieve pain. Don't apply ice directly to the skin. Wrap the ice in a towel, piece of cloth or some other material. 4)Treat for shock. If the person feels faint or is breathing in short, rapid breaths, lay the person down with the head slightly lower than the trunk and, if possible, elevate the legs.";
 } else {
-    // output = "Sorry, I don't understand that. Please try something else.";
-    output =
-      "this is what i found on internet regarding " +
-        input.replace("flash", "") || input.replace("flash", "");
-    window.open(
-      `https://www.google.com/search?q=${input.replace("flash", "")}`,
-      "_blank"
-    );
+    // // output = "Sorry, I don't understand that. Please try something else.";
+    // output =
+    //   "this is what i found on internet regarding " +
+    //     input.replace("flash", "") || input.replace("flash", "");
+    // window.open(
+    //   https://www.google.com/search?q=${input.replace("flash", "")},
+    //   "_blank"
+    // );
+    // Default response for non-predefined queries with a Google Search link
+    const googleSearchUrl = `https://www.google.com/search?q=${input.replace("flash", "")}`;
+    output = `I can't provide medical assistance regarding ${input.toLowerCase()}. You should consult a doctor for the same or if you want to refer to google, <a href="${googleSearchUrl}" target="_blank"> Click here</a>.`;
+    
+    displayOutput(output);
   }
   return output;
 }
+
+function displayOutput(message) {
+    // Assuming chat container exists
+    let chat = document.getElementById("chat");
+    let botMessage = document.createElement("div");
+   const messageElement = document.createElement('div');
+   botMessage.classList.add('message');
+   botMessage.classList.add("bot");
+   let botText = document.createElement("div");
+   let botAvatar = document.createElement("div");
+ botAvatar.classList.add("avatar");
+   botText.classList.add("text");
+   botText.innerHTML = message;
+   botMessage.appendChild(botAvatar);
+ botMessage.appendChild(botText);
+ chat.appendChild(botMessage);
+   chatContainer.appendChild(messageElement);
+ }
 
 // Display the user message on the chat
 function displayUserMessage(message) {
