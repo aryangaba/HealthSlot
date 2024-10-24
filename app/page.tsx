@@ -93,7 +93,7 @@ const Home = ({ searchParams }: SearchParamProps) => {
           }}
         >
           <iframe
-            src="http://127.0.0.1:5500/public/chatbot/index.html"
+            src="http://127.0.0.1:5000/"
             style={{
               width: "100%",
               height: "100%",
