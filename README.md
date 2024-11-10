@@ -1,1 +1,1 @@
-Healthslot
+Healthslot-A healthcare platform
