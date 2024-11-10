@@ -1,7 +1,7 @@
 <div align="center">
   
   <h3><a align="center">HealthSlot: A Healthcare Platform</a></h3>
-    <a href="https://youtu.be/lEflo_sc82g?feature=shared" target="_blank">
+    <a >
       <img src="https://github.com/user-attachments/assets/ea61c50e-c1da-4baf-a6e1-7ac23a5a10d7" alt="Project Banner">
       
 
