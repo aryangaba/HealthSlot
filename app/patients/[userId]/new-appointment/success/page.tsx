@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Doctors } from "@/constants";
 import { getAppointment } from "@/lib/actions/appointment.actions";
 import { formatDateTime } from "@/lib/utils";
-// Full New appointment = Rounak ranjan
+// Full New appointment
 const RequestSuccess = async ({
   searchParams,
   params: { userId },
